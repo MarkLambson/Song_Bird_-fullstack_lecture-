@@ -32,14 +32,14 @@ const Create = () => {
                 // Navigate back to home
                 navigate("/")
             })
-            .catch(err => {
-                const errorResponse = err.response.data.errors;
-                const errorArr = [];
+            .catch((err) => {
+                const errorResponse = err.response.data.errors
+                const errorArr = []
                 for (const key of Object.keys(errorResponse)) {
                     errorArr.push(errorResponse[key].message)
                 }
                 // Set Errors
-                setErrors(errorArr);
+                setErrors(errorArr)
             })
     }
 
